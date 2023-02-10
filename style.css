@@ -1,0 +1,60 @@
+#game-container {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.obstacle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+    left: 100%;
+    bottom: 0;
+}
+
+.player {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #f00;
+}
+
+.score-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.score-label {
+    font-size: 20px;
+    color: #fff;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.score {
+    font-size: 16px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+/* Style the reset button */
+.reset {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #fff;
+    border: solid;
+    border-color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
