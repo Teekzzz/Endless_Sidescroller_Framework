@@ -5,26 +5,27 @@
     width: 100%;
     height: 500px;
     position: relative;
-    background-color: #000;
     overflow: hidden;
 }
 
 .obstacle {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: url('assets/bat.16x16.png');
+    background-position: 0px 0px;
+    align-self: center;
     left: 100%;
     bottom: 0;
+    z-index: 1;
 }
 
 .player {
     position: absolute;
-    width: 100px;
-    height: 110px;
-    background-color: #f00;
-    background: url('https://miro.medium.com/v2/resize:fit:720/format:webp/1*WhDjw8GiV5o0flBXM4LXEw.png') 0px 0px;
+    width: 32px;
+    height: 32px;
+    background: url('assets/rogue-walking-spritesheet.png') 0px 0px;
+    z-index: 1;
 }
 
 .score-container {
@@ -34,13 +35,15 @@
     display: flex;
     align-items: center;
     padding: 10px;
+    z-index: 2;
 }
 
 .score-label {
     font-size: 20px;
-    color: #fff;
+    color: black;
     margin-right: 10px;
     font-weight: bold;
+    z-index: 2;
 }
 
 .score {
@@ -51,7 +54,7 @@
 
 /* The following is the reset button (which is also sitting within the html code). This hasn't actually been utilised 
    by the JS code, but it's there if you want to use it. */
-   
+
 .reset {
     position: absolute;
     top: 0;
@@ -64,3 +67,29 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+/* Style the sky div, so that it sits at the top of the screen - extending down 50% and has blue sky and clouds as it's background. */
+
+.sky {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background: url('assets/country-platform-back.png');
+    z-index: 0;
+}
+
+/* Style the sky div, so that it sits at the top of the screen - extending down 25% and has blue sky and clouds as it's background. */
+
+.floor {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: url('assets/country-platform-tiles-example.png');
+    z-index: 0;
+}
+

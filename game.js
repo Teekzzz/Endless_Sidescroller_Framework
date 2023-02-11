@@ -15,15 +15,31 @@ let startTime = Date.now();
 
 // Setting and creating the player animation function.
 
-let currentFrame = 0;
-const frameWidth = 123;
-const frameHeight = 123;
-const numFrames = 8;
+let currentFrame = 1;
+const frameWidth = 32;
+const frameHeight = 32;
+const numFrames = 10;
 
 function animatePlayer() {
     currentFrame = (currentFrame + 1) % numFrames;
-    player.style.backgroundPosition = `-${currentFrame * frameWidth}px 0px`;
-}
+    player.style.backgroundPosition = `-${currentFrame * frameWidth} 0px 32px`;
+};
+
+setInterval(animatePlayer, 100);
+
+// Setting and creating the obstacle animation function.
+
+let currentFrame2 = 0;
+const frameWidth2 = 30 + 'px';
+const frameHeight2 = 30 + 'px';
+const numFrames2 = 5;
+
+function animateObstacle() {
+    currentFrame2 = (currentFrame2 + 1) % numFrames2;
+    obstacle.style.backgroundPosition = `-${currentFrame2 * frameWidth2} 0px 30px`;
+    setInterval(animateObstacle, 100);
+};
+
 
 // Creating the obstacle and randomizing the obstacle spawn.
 
@@ -49,8 +65,8 @@ function createObstacle() {
     }
 
     newObstacle.style.left = window.innerWidth;
-    newObstacle.style.width = '50px';
-    newObstacle.style.height = '50px';
+    newObstacle.style.width = '32px';
+    newObstacle.style.height = '32px';
   
     let speed = 2 + score / 20;
     newObstacle.speed = speed;
@@ -78,8 +94,10 @@ const moveObstacle = (obstacle) => {
     obstacle.style.left = `${obstacle.offsetLeft - obstacle.speed}px`;
 };
 
+
+// Setting the Game Container and Player styles.
 const gameContainer = document.querySelector('#game-container');
-gameContainer.style.height = `${window.innerHeight}px`;
+gameContainer.style.height = window.innerHeight;
 gameContainer.style.width = '100%';
 gameContainer.style.background = 'black';
 
