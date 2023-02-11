@@ -18,9 +18,10 @@
 
 .player {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 123px;
+    height: 123px;
     background-color: #f00;
+    background: url('https://miro.medium.com/v2/resize:fit:720/format:webp/1*WhDjw8GiV5o0flBXM4LXEw.png') 0px 0px;
 }
 
 .score-container {
