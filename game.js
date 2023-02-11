@@ -1,7 +1,3 @@
-//Import JSFiddle
-
-
-
 // Declaring the constants for the obstacle, player, and score.
 
 const obstacle = document.querySelector('.obstacle');
