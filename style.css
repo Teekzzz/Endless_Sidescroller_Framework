@@ -1,3 +1,6 @@
+/* The following sections I have tried to make pretty self-explantory (naming conventions, etc.) */
+/* I have also made the code very basic and easy to understand, so you can easily change it to your liking */
+
 #game-container {
     width: 100%;
     height: 500px;
@@ -18,8 +21,8 @@
 
 .player {
     position: absolute;
-    width: 123px;
-    height: 123px;
+    width: 100px;
+    height: 110px;
     background-color: #f00;
     background: url('https://miro.medium.com/v2/resize:fit:720/format:webp/1*WhDjw8GiV5o0flBXM4LXEw.png') 0px 0px;
 }
@@ -46,7 +49,9 @@
     color: #fff;
 }
 
-/* Style the reset button */
+/* The following is the reset button (which is also sitting within the html code). This hasn't actually been utilised 
+   by the JS code, but it's there if you want to use it. */
+   
 .reset {
     position: absolute;
     top: 0;

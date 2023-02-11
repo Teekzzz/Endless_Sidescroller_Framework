@@ -9,7 +9,12 @@ let playerBottom = 0;
 let jumping = false;
 let doubleJumping = false;
 
-// Animate the Player
+const scoreDisplay = document.querySelector('.score');
+let score = 0;
+let startTime = Date.now();
+
+// Setting and creating the player animation function.
+
 let currentFrame = 0;
 const frameWidth = 123;
 const frameHeight = 123;
@@ -19,15 +24,6 @@ function animatePlayer() {
     currentFrame = (currentFrame + 1) % numFrames;
     player.style.backgroundPosition = `-${currentFrame * frameWidth}px 0px`;
 }
-    
-    
-
-
-
-const scoreDisplay = document.querySelector('.score');
-let score = 0;
-let startTime = Date.now();
-
 
 // Creating the obstacle and randomizing the obstacle spawn.
 
